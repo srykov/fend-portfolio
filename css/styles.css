@@ -1,58 +1,69 @@
 html {
-    box-sizing: border-box
+	box-sizing: border-box;
 }
+
 *,
 *::after,
 *::before {
-    box-sizing: inherit
-}
-h1, h2, h3, h4, h5, h6 {
-  	margin: 0;
-    font-family: 'Barlow Condensed', serif;
+	box-sizing: inherit;
 }
 
-h1, h2{
+body {
+	margin: 20px;
+	font-family: 'Barlow Condensed', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
 	color: #f4b042;
 }
 
-h2, h3{
-	color: #a1a5ad;
+h4 {
+	color: #a9a9a9;
 }
 
 p {
-  font-family: 'Barlow Condensed', serif;
-  color: #a9a9a9;
-  margin: 0;
-}
-
-body{
-	margin: 20px;
+	color: #a9a9a9;
+	margin: 0;
 }
 
 img {
-	width: 100%; 
+	width: 100%;
 	height: auto;
 }
 
-.container{
+.container {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-header{
+.header-container {
 	width: 100%;
 	border-bottom: #f4b042 2px dotted;
 	order: 1;
-	justify-content: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	max-width: 1000px;
 }
 
 .header-logo {
-    order: 1;
-    padding: 10px;
-    width: auto;
-    max-width: 30%;
-    align-self: flex-start;
-    margin-right: auto;
+	order: 1;
+	padding: 10px;
+	width: auto;
+	max-width: 30%;
+	align-self: flex-end;
+	margin-right: auto;
 }
 
 .title {
@@ -63,52 +74,54 @@ header{
 	margin-bottom: 15px;
 }
 
-.hero{
+.hero {
 	order: 2;
 	padding: 10px 20px;
 	width: 100%;
 }
 
-.featured-adventures{
+.featured-adventures {
 	order: 3;
 	padding: 10px;
 }
 
-.featured-adventures-header{
+.featured-adventures-header {
 	width: 100%;
 }
 
-.adventure{
+.adventure {
 	max-width: 100%;
 	padding: 10px;
 }
 
-
-
 /*tablet*/
-@media screen and (min-width: 413px) and (max-width: 769px){
-
+@media screen and (min-width:413px) and (max-width:769px) {
 	.header-logo {
-	    padding: 0 10px;
+		padding: 0 10px;
 	}
 
-	.adventure{
+	.adventure {
 		width: 50%;
 		padding: 10px;
 	}
+
 }
 
 /*desktop*/
-@media screen and (min-width: 769px) {
-	body{
+@media screen and (min-width:769px) {
+	body {
 		margin: 0 100px;
 	}
+	
+	.header-container {
+		border: none;
+	}
 
-	.hero{
+	.hero {
 		align-self: flex-end;
 	}
 
-	.adventure{
+	.adventure {
 		width: 33%;
 		padding: 25px;
 	}
